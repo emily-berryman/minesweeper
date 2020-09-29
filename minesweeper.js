@@ -49,22 +49,36 @@ var board = {
       row: 2,
       col: 3,
       isMine: false,
-      hidden: true
+      hidden: true,
    },
    {
       row: 3,
       col: 3,
       isMine: false,
-      hidden: true
+      hidden: true,
    }
    
   ]
 }
 
+// PART 1: 
+// Write a for loop that loops through the content of board.cells
+// the loop should call the countSurroundingMines function once for each cell in board.cells - you will need to pass each cell as an argument (the bit in the parentheses)
+// Assign the result of the countSurroundingMines to a property on each cell object - this new property should be called surroundingMines
+
+
 function startGame () {
-  // Don't remove this function call: it makes the game work!
-  lib.initBoard()
-}
+  for(var i = 0; i < board['cells'].length; i++) 
+   var cell = board['cells'][i]
+   {
+   var mineCount = countSurroundingMines(cell) 
+   mineCount = board['cells'].surroundingMines
+   //   if(board['cells'][i].isMine == true){
+   //      console.log(board['cells'][i].row + "," + board['cells'][i].col)
+   lib.initBoard()     
+   }
+  }
+
 
 // Define this function to look for a win condition:
 //
@@ -86,5 +100,19 @@ function checkForWin () {
 // It will return cell objects in an array. You should loop through 
 // them, counting the number of times `cell.isMine` is true.
 function countSurroundingMines (cell) {
+//    var row = board.cells.row
+//    var col = board.cells.col
+//    var surrounding = lib.getSurroundingCells()
+//    var count = 0
+//    for (var i = 0; i < surrounding.length; i++ ){
+//    return surrounding[i]
+//    }
 }
 
+console.log(board)
+
+// a new function takes a cell as an argument, creates a new variable that is equal to the surrounding cells (using  lib.getSurroundingCells that they provided and calling it on the row and col of the cell) and another new variable (that I named count) that is equal to 0.
+// The function cycles through so long as i<surrounding.length and IF the i'th value of surrounding isMine then count increases by one.
+// Finally the count is returned.
+
+countSurroundingMines()

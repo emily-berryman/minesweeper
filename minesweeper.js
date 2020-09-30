@@ -7,55 +7,64 @@ var board = {
       row: 1,
       col: 1,
       isMine: true,
+      isMarked: false,
       hidden: true
   },
    {
       row: 2,
       col: 1,
       isMine: false,
+      isMarked: false,
       hidden: true
    }, 
    {
       row: 3,
       col: 1,
       isMine: false,
+      isMarked: false,
       hidden: true
    }, 
    {
       row: 1,
       col: 2,
       isMine: false,
+      isMarked: false,
       hidden: true
    }, 
   {
       row: 2,
       col: 2,
       isMine: false,
+      isMarked: false,
       hidden: true
   },
    {
       row: 3,
       col: 2,
       isMine: false,
+      isMarked: false,
       hidden: true
    }, 
    {
       row: 1,
       col: 3,
       isMine: false,
+      isMarked: false,
       hidden: true
    }, 
    {
       row: 2,
       col: 3,
       isMine: false,
-      hidden: true,
+      isMarked: false,
+      hidden: true
    },
    {
       row: 3,
       col: 3,
       isMine: false,
-      hidden: true,
+      isMarked: false,
+      hidden: true
    }
    
   ]
@@ -86,7 +95,7 @@ function checkForWin () {
       var currentCell = board.cells[i]
       if (currentCell.isMine == true && currentCell.isMarked == false) {
          return;
-      } else if (currentCell.hidden == true) {
+      } else if (currentCell.hidden == true && currentCell.isMine == false) {
          return;
       }
       }
@@ -134,8 +143,8 @@ function checkForWin () {
 // 2. Use getSurroundingCells to get the array of adjacent cells
 // 3. loop over and count the number of mines
 
-function countSurroundingMines(cellAskKelly) {
-   var adjacentCells = getSurroundingCells(cellAskKelly.row, cellAskKelly.col)
+function countSurroundingMines(cell) {
+   var adjacentCells = getSurroundingCells(cell.row, cell.col)
    var count = 0
    for (var i = 0; i < adjacentCells.length; i++){
       if (adjacentCells[i].isMine == true){

@@ -103,26 +103,6 @@ function checkForWin () {
    }
 
 
-
-  // You can use this function call to declare a winner (once you've
-  // detected that they've won, that is!)
- 
-
-
-   // If every mine is marked, but there are still cells with the hidden property set to true, the player hasn't won yet and you can return out of the function.
-   // // Create a loop to run through the properties contained in each of the cells
-   // // each cell should have .isMine & .isMarked should be true for 
-
-   // or each cell, check to see if both .isMine and .isMarked are true. If any mine still exists that isn't marked, the player hasn't won yet and you can return to exit out of the function.
-
-// // Define this function to count the number of mines around the cell
-// // (there could be as many as 8). You don't have to get the surrounding
-// // cells yourself! Just use `lib.getSurroundingCells`: 
-// //
-// //   var surrounding = lib.getSurroundingCells(cell.row, cell.col)
-// //
-// // It will return cell objects in an array. You should loop through 
-// // them, counting the number of times `cell.isMine` is true.
 // function countSurroundingMines (cell) {
 // //    var row = board.cells.row
 // //    var col = board.cells.col

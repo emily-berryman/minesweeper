@@ -74,7 +74,7 @@ var board = {
 // Write a for loop that loops through the content of board.cells
 // the loop should call the countSurroundingMines function once for each cell in board.cells - you will need to pass each cell as an argument (the bit in the parentheses)
 // Assign the result of the countSurroundingMines to a property on each cell object - this new property should be called surroundingMines
-
+// only need to put an argument in the brackets when we the function to run the function for different things
 
 function startGame () {
   for(var i = 0; i < board['cells'].length; i++){
@@ -133,4 +133,4 @@ function countSurroundingMines(cell) {
    }
    return count
 }
-
+ 
